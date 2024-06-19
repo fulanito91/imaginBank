@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.imagin.es</title>
+    <link rel="manifest" href="manifest.json">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #15e4b4, #6ce96c) 0 0 / 100% 54% no-repeat, #fff 0 50% / 100% 50% no-repeat;
+}
+
+.form-control.border-bottom {
+    border: none;
+    border-bottom: 2px solid #000;  /* Línea negra en la parte inferior */
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.375rem 0; /* Ajusta el padding para que se vea bien */
+}
+
+.form-control.border-bottom:focus {
+    border-bottom: 2px solid #007BFF;
+    outline: none;
+    box-shadow: none;
+}
+
+.eye-icon {
+    cursor: pointer;
+}
+
+.container {
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.login-box p {
+    color: #888;
+    font-size: 0.875em; /* Tamaño de fuente más pequeño */
+}
+
+.btn-custom {
+    display: inline-block;
+    width: 62%;
+    padding: 7px;
+    background-color: #15e4b4; /* Mismo color que el fondo */
+    border: none;
+    border-radius: 20px; /* Bordes más redondeados */
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #13c1a3; /* Verde más oscuro al pasar el ratón */
+}
+
+.help-link, .face-id-link {
+    display: block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.face-id-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.face-id-link:before {
+    content: '🔍';
+    margin-right: 5px;
+}
+
+.face-id-container {
+    margin-top: 40px; /* Ajusta este valor según sea necesario */
+}
+    </style>
+</head>
+<body>
+    <div class="container d-flex flex-column align-items-center justify-content-center vh-100">
+        <div class="logo mb-3">
+            <img src="imagenes/IMG_8612.PNG" alt="Logo" class="img-fluid" width="100">
+        </div>
+        <div class="login-box text-center bg-white p-4 rounded shadow">
+            <h2>Hola Ismael</h2>
+            <p class="text-muted">Último acceso: Hoy a las 07:44h</p>
+            <form>
+                <div class="form-group position-relative mb-4">
+                    <input type="password" id="password" class="form-control border-bottom" placeholder="Contraseña" autofocus>
+                    <span class="eye-icon position-absolute" style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></span>
+                </div>
+                <a href="./imagen.html" class="btn-custom">Entrar</a>
+            </form>
+            <a href="#" class="d-block mt-3">¿No puedes entrar?</a>
+        </div>
+        <div class="face-id-container">
+            <a href="#" class="d-flex align-items-center justify-content-center mt-2">
+                <span class="mr-2"></span> Accede mostrando tu cara
+            </a>
+        </div>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+                console.log('Service Worker registrado con éxito:', registration);
+            })
+            .catch(function(error) {
+                console.log('Fallo en el registro del Service Worker:', error);
+            });
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
